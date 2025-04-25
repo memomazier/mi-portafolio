@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conocimientos | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #0f0f1a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #15152a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 28px;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-description {
+      text-align: center;
+      color: #bbb;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .knowledge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .knowledge-card {
+      background: #1e1e33;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .knowledge-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+    .knowledge-card img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+    }
+    .knowledge-card .content {
+      padding: 20px;
+    }
+    .knowledge-card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #fff;
+    }
+    .knowledge-card p {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 15px;
+    }
+    .skill-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .skill-box img {
+      width: 40px;
+      height: 40px;
+    }
+    .stars {
+      display: flex;
+    }
+    .star {
+      color: #444;
+      font-size: 20px;
+    }
+    .star.filled {
+      color: #fcd34d;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guillermo</h1>
+    <nav>
+      <a href="principal.html">Inicio</a>
+      <a href="principal.html#acerca">Acerca de mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="conocimientos.html">Conocimientos</a>
+      <a href="contactame.html">Contáctame</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Conocimientos y Herramientas</h2>
+    <p class="section-description">Aquí te muestro las herramientas que domino y para qué las utilizo.</p>
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <img src="imagenes/interfazphotoshop.png" alt="Photoshop">
+        <div class="content">
+          <h3>Photoshop</h3>
+          <p>Photoshop es una de mis herramientas esenciales para la creación de diseños gráficos. La utilizo principalmente para editar imágenes, 
+            crear banners, miniaturas y todo tipo de material visual. Manejo técnicas avanzadas como la manipulación de capas, retoques fotográficos, 
+            y efectos visuales. También realizo composiciones complejas, adaptando colores, iluminación y texturas para que cada pieza sea única. Su 
+            versatilidad me permite transformar conceptos en imágenes impactantes y personalizadas, desde la creación de logotipos hasta la edición de 
+            fotos para marketing. Además, aprovecho las herramientas de selección y máscaras de capa para obtener resultados detallados y precisos.</p>
+          <div class="skill-box">
+            <img src="imagenes/photoshopicono.png" alt="Photoshop Icon">
+            <div class="stars">
+              <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Clonar esta card para otras herramientas -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <img src="imagenes/interfazpremiere.png" alt="Premiere">
+        <div class="content">
+          <h3>Premiere Pro</h3>
+          <p>Premiere Pro es mi elección para la edición de videos. Esta herramienta me permite cortar, organizar y montar clips de manera fluida 
+            y profesional. Trabajo con transiciones, efectos de sonido y corrección de color para dar un acabado cinematográfico a mis proyectos. 
+            Además, es fundamental para la edición de videos en plataformas como YouTube, TikTok y Reels, donde la velocidad y la calidad son esenciales. 
+            Con Premiere, también me encargo de la sincronización del audio y el ajuste de la velocidad de los clips para lograr una narrativa coherente 
+            y dinámica. La integración con otros programas de Adobe facilita aún más el flujo de trabajo.</p>
+          <div class="skill-box">
+            <img src="imagenes/premiereicono.png" alt="Premiere Icon">
+            <div class="stars">
+              <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Clonar esta card para otras herramientas -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <img src="imagenes/interfazafter.png" alt="After Effects">
+        <div class="content">
+          <h3>After Effects</h3>
+          <p>After Effects es mi herramienta preferida para animaciones y efectos visuales. La utilizo para agregar 
+            dinamismo a los proyectos, creando animaciones 2D y 3D, efectos de partículas y transiciones avanzadas. 
+            Es perfecta para la creación de intros, títulos en movimiento, y gráficos en pantalla que dan vida a mis 
+            videos. La integración con Photoshop e Illustrator permite que los diseños estáticos se transformen en contenido animado, 
+            lo que ofrece una experiencia visual atractiva y profesional. También trabajo con keyframes, curvas de animación y composiciones 
+            complejas para asegurarme de que cada efecto esté sincronizado a la perfección con la música y el ritmo del video.</p>
+          <div class="skill-box">
+            <img src="imagenes/aftereffectsicono.png" alt="AfterEffects Icon">
+            <div class="stars">
+              <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Clonar esta card para otras herramientas -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="knowledge-grid">
+      <div class="knowledge-card">
+        <img src="imagenes/interfazillustrator.png" alt="Illustrator">
+        <div class="content">
+          <h3>Illustrator</h3>
+          <p>Illustrator es mi herramienta principal para la creación de ilustraciones y gráficos vectoriales. Con ella diseño 
+            logotipos, íconos, y elementos gráficos que requieren alta precisión y escalabilidad. La utilización de herramientas 
+            como el trazado y la manipulación de formas me permite crear diseños limpios y detallados, perfectos para cualquier 
+            tipo de aplicación, desde material publicitario hasta branding de empresas. Illustrator es ideal para trabajos donde 
+            la resolución es importante, ya que los gráficos vectoriales no pierden calidad sin importar el tamaño. Además, la 
+            integración con Photoshop y After Effects facilita un flujo de trabajo eficiente cuando necesito incorporar estos 
+            elementos gráficos en proyectos de diseño más complejos.</p>
+          <div class="skill-box">
+            <img src="imagenes/illustratoricono.png" alt="Illustrator Icon">
+            <div class="stars">
+              <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Clonar esta card para otras herramientas -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mi Portafolio | Diseñado por mí</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.section-title', { delay: 100, distance: '40px', origin: 'bottom', duration: 800 });
+    ScrollReveal().reveal('.section-description', { delay: 200, distance: '30px', origin: 'bottom', duration: 700 });
+    ScrollReveal().reveal('.knowledge-card', { interval: 200, distance: '60px', origin: 'bottom', duration: 1000 });
+  </script>
+</body>
+</html>

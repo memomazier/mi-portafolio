@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #0f0f1a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #15152a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 28px;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-description {
+      text-align: center;
+      color: #bbb;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card {
+      background: #1e1e33;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+    .card img, .card iframe {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    .card iframe {
+      aspect-ratio: 16/9;
+    }
+    .footer {
+      background: #10101f;
+      color: #999;
+      padding: 30px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .form-video {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .form-video input[type="text"] {
+      padding: 10px;
+      width: 60%;
+      border-radius: 8px;
+      border: none;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    .form-video button {
+      padding: 10px 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guillermo</h1>
+    <nav>
+      <a href="principal.html">Inicio</a>
+      <a href="principal.html#acerca">Acerca de mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="conocimientos.html">Conocimientos</a>
+      <a href="contactame.html">Contáctame</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Miniaturas para YouTube</h2>
+    <p class="section-description">Estas miniaturas fueron realizadas utilizando herramientas como Photoshop y Canva, enfocadas en captar la atención desde el primer vistazo.</p>
+    <div class="grid">
+        <div class="card"><img src="imagenes/miniaturabarca.avif" alt="Miniatura YouTube 1"></div>
+        <div class="card"><img src="imagenes/miniaturaroier.jpg" alt="Miniatura YouTube 2"></div>
+        <div class="card"><img src="imagenes/miniaturalaugamer.jpg" alt="Miniatura YouTube 3"></div>
+        <div class="card"><img src="imagenes/miniaturanene.jpeg" alt="Miniatura YouTube 4"></div>
+        <div class="card"><img src="imagenes/miniaturanene2.jpg" alt="Miniatura YouTube 5"></div>
+        <div class="card"><img src="imagenes/miniaturanene3.jpg" alt="Miniatura YouTube 6"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Videos para YouTube</h2>
+    <p class="section-description">Unos de los videos que e editado para YouTube utilizando Adobe Premiere Pro, After Effects y Photoshop.</p>
+    <div class="grid" id="youtube-videos">
+        <div class="card"><iframe src="https://www.youtube.com/embed/cF3uzSd2drQ?si=mQaN3M8GbhHcwhcQ" frameborder="0" allowfullscreen></iframe></div>
+        <div class="card"><iframe src="https://www.youtube.com/embed/_7Jy7PPqw2E?si=vLEmQ2GwxmwffMhX" frameborder="0" allowfullscreen></iframe></div>
+        <div class="card"><iframe src="https://www.youtube.com/embed/VMidujLgnZI?si=aMcxzeUlbExERxq3" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Diseños Gráficos (Logos / Banners / Invitaciones)</h2>
+    <p class="section-description">Algunos diseños que e realizado para usos personales, de empresas, organizaciones etc. Utilizando Adobe Photoshop e Illustrator.</p>
+    <div class="grid">
+        <div class="card"><img src="imagenes/incodeselogo.jpg" alt="Banner 1"></div>
+        <div class="card"><img src="imagenes/incodeselogo2.jpg" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/VentaToyota1.jpg" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/SelloPNG.png" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/cultivandologo.png" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/cultivandologo2.png" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/Logo3(FondoBlanco).jpg" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/Logo5(FondoBlanco).jpg" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/BANNER.jpg" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/bannercompleto.JPG" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/stickerNUEVO.jpg" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/snapshot.png" alt="Invitación 1"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mi Portafolio | Diseñado por mí</p>
+  </footer>
+
+  <script>
+    ScrollReveal({ reset: false }).reveal('.section-title', { delay: 100, distance: '50px', origin: 'bottom', duration: 1000 });
+    ScrollReveal({ reset: false }).reveal('.section-description', { delay: 200, distance: '40px', origin: 'bottom', duration: 800 });
+    ScrollReveal({ reset: false }).reveal('.card', { interval: 200, distance: '60px', origin: 'bottom', duration: 1200, easing: 'ease-out' });
+
+    function agregarVideo() {
+      const link = document.getElementById('youtube-link').value;
+      const match = link.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/);
+      if (match) {
+        const embedLink = `https://www.youtube.com/embed/${match[1]}`;
+        const div = document.createElement('div');
+        div.className = 'card';
+        div.innerHTML = `<iframe src="${embedLink}" frameborder="0" allowfullscreen></iframe>`;
+        document.getElementById('youtube-videos').appendChild(div);
+        document.getElementById('youtube-link').value = '';
+      } else {
+        alert('Enlace no válido');
+      }
+    }
+  </script>
+</body>
+</html>

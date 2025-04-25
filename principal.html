@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Editor & Diseñador Gráfico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #0f0f1a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #15152a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 28px;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 800px;
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .about-img {
+      margin-top: 40px;
+      width: 200px;
+      border-radius: 50%;
+      border: 3px solid #2575fc;
+      box-shadow: 0 0 15px rgba(97, 85, 255, 0.5);
+    }
+    section {
+      padding: 80px 40px;
+    }
+    .footer {
+      background: #10101f;
+      color: #999;
+      padding: 30px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-align: center;
+    }
+    .programs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .programs img {
+      width: 80px;
+      height: 80px;
+      transition: transform 0.3s ease;
+    }
+    .programs img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guillermo</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#acerca">Acerca de mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="conocimientos.html">Conocimientos</a>
+      <a href="contactame.html">Contáctame</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2 style="color: #ffffff;">Hola, soy Guillermo</h2>
+    <h2>Editor de Videos y Diseñador Gráfico</h2>
+    <img src="imagenes/perfil.jpg" alt="Foto de perfil" class="about-img">
+    <p>
+      Soy editor de videos para redes sociales <strong>(YouTube, Reels, TikToks)</strong> con experiencia en la siguiente suite de Adobe: <strong>Photoshop, Premiere Pro, After Efects, Ilustrator.</strong> Puedes contactarme para poder llevar tu idea a la realidad.
+    </p>
+  </section>
+
+  <section id="acerca">
+    <h2 class="section-title">Sobre mí</h2>
+    <p style="max-width: 800px; margin: 0 auto; color: #bbb; text-align: center;">
+      Actualmente, soy estudiante de la carrera Ingeniería en Sistemas.
+                    Además de mis estudios, soy editor de videos para redes sociales. Tengo experiencia editando contenido para YouTube, Reels y TikTok. 
+                    Poseo un amplio conocimiento en la suite de Adobe, incluyendo <strong>Photoshop, Premiere Pro, After Effects, Ilustrator,</strong> entre otros, lo que me permite crear 
+                    contenido visual de alta calidad y adaptado a diferentes necesidades y formatos. Estoy disponible para llevar tus proyectos a un mejor nivel.
+    </p>
+    <div class="programs">
+      <img src="imagenes/photoshoplogo.png" alt="Adobe Photoshop">
+      <img src="imagenes/premiereprologo.png" alt="Adobe Premiere">
+      <img src="imagenes/afftereffectslogo.png" alt="Adobe After Effects">
+      <img src="imagenes/illustratorlogo.png" alt="Adobe Illustrator">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mi Portafolio | Diseñado por mí</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.hero h2, .hero p, .about-img', { delay: 200, distance: '50px', origin: 'bottom', duration: 800 });
+    ScrollReveal().reveal('.section-title, .programs img', { interval: 100, distance: '30px', origin: 'bottom' });
+  </script>
+</body>
+</html>
