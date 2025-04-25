@@ -37,6 +37,9 @@
       color: transparent;
       font-size: 28px;
     }
+    nav {
+      display: flex;
+    }
     nav a {
       color: #ccc;
       margin-left: 30px;
@@ -45,6 +48,23 @@
     }
     nav a:hover {
       color: #ffffff;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 5px 0;
+    }
+    .menu {
+      display: flex;
+    }
+    .menu.active {
+      display: block;
     }
     .section {
       padding: 80px 40px;
@@ -130,7 +150,22 @@
       padding: 30px 20px;
       color: #777;
     }
+
     @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+      }
+      .menu.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .hamburger {
+        display: flex;
+      }
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -140,7 +175,12 @@
 <body>
   <header>
     <h1>Guillermo</h1>
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="menu" class="menu">
       <a href="index.html">Inicio</a>
       <a href="index.html#acerca">Acerca de mí</a>
       <a href="proyectos.html">Proyectos</a>
@@ -164,8 +204,8 @@
           <button type="submit">Enviar mensaje</button>
         </form>
         <div class="social-icons" style="margin-top: 20px;">
-          <a href="https://x.com/memomazier" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/jose_m08/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/memomazier" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/jose_m08/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
@@ -181,6 +221,11 @@
     ScrollReveal().reveal('.contact-grid img', { delay: 300, distance: '40px', origin: 'left', duration: 1000 });
     ScrollReveal().reveal('.contact-info', { delay: 400, distance: '40px', origin: 'right', duration: 1000 });
 
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+
     document.getElementById("contact-form").addEventListener("submit", function(event) {
       event.preventDefault();
 
@@ -190,7 +235,7 @@
         message: document.getElementById("message").value
       };
 
-      fetch("https://formspree.io/f/xgvojkob", { // Reemplaza con tu endpoint real
+      fetch("https://formspree.io/f/xgvojkob", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

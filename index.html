@@ -107,6 +107,138 @@
     .programs img:hover {
       transform: scale(1.1);
     }
+
+    /* Diseño responsivo del navbar */
+    @media (max-width: 768px) {
+      nav {
+        display: none; /* Ocultar los enlaces del navbar por defecto */
+        flex-direction: column;
+        position: absolute;
+        background: #15152a;
+        top: 80px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      nav a {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+
+      header .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+      
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px auto;
+      }
+      
+      nav.active {
+        display: flex;
+      }
+    }
+
+    /* Secciones */
+    .section {
+      padding: 80px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* Reajustar el grid de contacto para móviles */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .contact-grid img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .contact-info {
+      background: #1e1e33;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .contact-info h3 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .contact-info p {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .contact-info .social-icons a {
+      color: white;
+      font-size: 20px;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+
+    .contact-info .social-icons a:hover {
+      color: #6a11cb;
+    }
+
+    /* Formulario */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #2e2e4d;
+      color: white;
+      resize: none;
+    }
+
+    form button {
+      padding: 12px;
+      border: none;
+      background: #6a11cb;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #2575fc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
@@ -119,6 +251,11 @@
       <a href="conocimientos.html">Conocimientos</a>
       <a href="contactame.html">Contáctame</a>
     </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <section class="hero" id="inicio">
@@ -134,9 +271,9 @@
     <h2 class="section-title">Sobre mí</h2>
     <p style="max-width: 800px; margin: 0 auto; color: #bbb; text-align: center;">
       Actualmente, soy estudiante de la carrera Ingeniería en Sistemas.
-                    Además de mis estudios, soy editor de videos para redes sociales. Tengo experiencia editando contenido para YouTube, Reels y TikTok. 
-                    Poseo un amplio conocimiento en la suite de Adobe, incluyendo <strong>Photoshop, Premiere Pro, After Effects, Ilustrator,</strong> entre otros, lo que me permite crear 
-                    contenido visual de alta calidad y adaptado a diferentes necesidades y formatos. Estoy disponible para llevar tus proyectos a un mejor nivel.
+      Además de mis estudios, soy editor de videos para redes sociales. Tengo experiencia editando contenido para YouTube, Reels y TikTok. 
+      Poseo un amplio conocimiento en la suite de Adobe, incluyendo <strong>Photoshop, Premiere Pro, After Effects, Ilustrator,</strong> entre otros, lo que me permite crear 
+      contenido visual de alta calidad y adaptado a diferentes necesidades y formatos. Estoy disponible para llevar tus proyectos a un mejor nivel.
     </p>
     <div class="programs">
       <img src="imagenes/photoshoplogo.png" alt="Adobe Photoshop">
@@ -146,13 +283,20 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Mi Portafolio | Diseñado por mí</p>
+  <footer>
+    <p>&copy; 2025 Guillermo Mazier | Todos los derechos reservados.</p>
   </footer>
 
   <script>
-    ScrollReveal().reveal('.hero h2, .hero p, .about-img', { delay: 200, distance: '50px', origin: 'bottom', duration: 800 });
-    ScrollReveal().reveal('.section-title, .programs img', { interval: 100, distance: '30px', origin: 'bottom' });
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    
+    ScrollReveal().reveal('.hero', { delay: 300, duration: 1000 });
+    ScrollReveal().reveal('.about-img', { delay: 300, duration: 1500 });
+    ScrollReveal().reveal('.programs', { delay: 500, duration: 2000 });
   </script>
 </body>
 </html>
