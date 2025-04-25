@@ -42,7 +42,7 @@
       display: flex;
     }
     .menu a {
-      color: #ccc;
+      color: white; /* Color blanco para las letras en el navbar */
       margin-left: 30px;
       text-decoration: none;
       transition: 0.3s;
@@ -141,6 +141,14 @@
       text-align: center;
       padding: 30px 20px;
       color: #777;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 20px;
+      }
     }
   </style>
 </head>
