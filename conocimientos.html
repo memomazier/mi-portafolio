@@ -36,28 +36,48 @@
       color: transparent;
       font-size: 28px;
     }
-    nav {
-      display: flex;
-      gap: 30px;
-    }
     nav a {
       color: #ccc;
+      margin-left: 30px;
       text-decoration: none;
       transition: 0.3s;
     }
-    nav a:hover {
-      color: #ffffff;
-    }
-    .menu-icon {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-    .menu-icon div {
-      width: 25px;
-      height: 3px;
-      background-color: #ccc;
+
+        /* Diseño responsivo del navbar */
+    @media (max-width: 768px) {
+      nav {
+        display: none; /* Ocultar los enlaces del navbar por defecto */
+        flex-direction: column;
+        position: absolute;
+        background: #15152a;
+        top: 80px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      nav a {
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+
+      header .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+      
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px auto;
+      }
+      
+      nav.active {
+        display: flex;
+      }
     }
     .section {
       padding: 80px 40px;
@@ -137,50 +157,24 @@
       padding: 30px 20px;
       color: #777;
     }
-
-    /* Estilos para dispositivos móviles */
-    @media screen and (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        background-color: #15152a;
-        padding: 20px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      }
-      nav a {
-        color: #ccc;
-        padding: 10px;
-        text-align: center;
-      }
-      .menu-icon {
-        display: flex;
-      }
-      .menu-icon.open + nav {
-        display: flex;
-      }
-    }
   </style>
 </head>
 <body>
+  
   <header>
     <h1>Guillermo</h1>
-    <div class="menu-icon" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="index.html#acerca">Acerca de mí</a>
+      <a href="#acerca">Acerca de mí</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="conocimientos.html">Conocimientos</a>
+      <a href="contactame.html">Contáctame</a>
     </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <section class="section">
@@ -279,20 +273,28 @@
       <!-- Clonar esta card para otras herramientas -->
     </div>
   </section>
+  
 
   <footer>
-    <p>&copy; 2025 Guillermo Mazier | Todos los derechos reservados.</p>
+    <p>&copy; 2026 Guillermo Mazier | Todos los derechos reservados.</p>
   </footer>
 
   <script>
     ScrollReveal().reveal('.section-title', { delay: 100, distance: '40px', origin: 'bottom', duration: 800 });
     ScrollReveal().reveal('.section-description', { delay: 200, distance: '30px', origin: 'bottom', duration: 700 });
     ScrollReveal().reveal('.knowledge-card', { interval: 200, distance: '60px', origin: 'bottom', duration: 1000 });
+  </script>
 
-    // Función para alternar el menú de hamburguesa
-    function toggleMenu() {
-      document.querySelector('.menu-icon').classList.toggle('open');
-    }
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    
+    ScrollReveal().reveal('.hero', { delay: 300, duration: 1000 });
+    ScrollReveal().reveal('.about-img', { delay: 300, duration: 1500 });
+    ScrollReveal().reveal('.programs', { delay: 500, duration: 2000 });
   </script>
 </body>
 </html>

@@ -36,76 +36,46 @@
       color: transparent;
       font-size: 28px;
     }
-    nav {
-      display: flex;
-      align-items: center;
-    }
     nav a {
       color: #ccc;
       margin-left: 30px;
       text-decoration: none;
       transition: 0.3s;
     }
-    nav a:hover {
-      color: #ffffff;
-    }
 
-    /* Estilos del menú hamburguesa */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 25px;
-      cursor: pointer;
-    }
-    .hamburger div {
-      background-color: #fff;
-      height: 4px;
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* Estilos del menú desplegable */
-    .nav-links {
-      display: flex;
-    }
-
-    .nav-links a {
-      display: block;
-      padding: 10px 15px;
-    }
-
-    .menu {
-      display: none;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      background-color: #15152a;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    .menu.active {
-      display: block;
-    }
-
+        /* Diseño responsivo del navbar */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
+      nav {
+        display: none; /* Ocultar los enlaces del navbar por defecto */
         flex-direction: column;
+        position: absolute;
+        background: #15152a;
+        top: 80px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      nav a {
+        margin-left: 0;
+        margin-bottom: 15px;
       }
 
-      .nav-links a {
-        margin: 10px 0;
+      header .hamburger {
+        display: block;
+        cursor: pointer;
       }
-
-      .hamburger {
-        display: flex;
+      
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px auto;
       }
-
-      .nav-links.active {
+      
+      nav.active {
         display: flex;
       }
     }
@@ -154,6 +124,13 @@
     .card iframe {
       aspect-ratio: 16/9;
     }
+    .card.tiktok {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
     .footer {
       background: #10101f;
       color: #999;
@@ -185,19 +162,21 @@
   </style>
 </head>
 <body>
+  
   <header>
     <h1>Guillermo</h1>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav class="nav-links">
+    <nav>
       <a href="index.html">Inicio</a>
-      <a href="index.html#acerca">Acerca de mí</a>
+      <a href="#acerca">Acerca de mí</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="conocimientos.html">Conocimientos</a>
+      <a href="contactame.html">Contáctame</a>
     </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <section class="section">
@@ -226,6 +205,81 @@
     </div>
   </section>
 
+<section class="section">
+  <h2 class="section-title">Videos para TikTok / Reels</h2>
+  <p class="section-description">
+   Algunos clips cortos editados para redes sociales, optimizados para impacto rápido y estilo dinámico.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <iframe
+        src="https://www.tiktok.com/embed/v2/7329268684554259718"
+        frameborder="0"
+        allowfullscreen
+        scrolling="no"
+        style="width:100%; height:520px;">
+      </iframe>
+    </div>
+
+    <div class="card">
+      <iframe
+        src="https://www.tiktok.com/embed/v2/7342979183506623750"
+        frameborder="0"
+        allowfullscreen
+        scrolling="no"
+        style="width:100%; height:520px;">
+      </iframe>
+    </div>
+
+    <div class="card">
+      <iframe
+        src="https://www.tiktok.com/embed/v2/7564159711860296971"
+        frameborder="0"
+        allowfullscreen
+        scrolling="no"
+        style="width:100%; height:520px;">
+      </iframe>
+    </div>
+
+    <div class="card">
+      <iframe
+        src="https://www.tiktok.com/embed/v2/7586454360717151544"
+        frameborder="0"
+        allowfullscreen
+        scrolling="no"
+        style="width:100%; height:520px;">
+      </iframe>
+    </div>
+
+    <div class="card">
+  <iframe
+    src="https://www.instagram.com/reel/DSIJrejkjQm/embed"
+    frameborder="0"
+    scrolling="no"
+    allowtransparency="true"
+    allowfullscreen
+    style="width:100%; height:520px;">
+  </iframe>
+</div>
+
+    <div class="card">
+  <iframe
+    src="https://www.instagram.com/reel/DRhbkSikdBn/embed"
+    frameborder="0"
+    scrolling="no"
+    allowtransparency="true"
+    allowfullscreen
+    style="width:100%; height:520px;">
+  </iframe>
+</div>
+  </div>
+</section>
+
+
+
+
+
   <section class="section">
     <h2 class="section-title">Diseños Gráficos (Logos / Banners / Invitaciones)</h2>
     <p class="section-description">Algunos diseños que e realizado para usos personales, de empresas, organizaciones etc. Utilizando Adobe Photoshop e Illustrator.</p>
@@ -242,22 +296,25 @@
         <div class="card"><img src="imagenes/bannercompleto.JPG" alt="Invitación 1"></div>
         <div class="card"><img src="imagenes/stickerNUEVO.jpg" alt="Invitación 1"></div>
         <div class="card"><img src="imagenes/snapshot.png" alt="Invitación 1"></div>
+        <div class="card"><img src="imagenes/FinsoFondoBlanco.jpg" alt="Invitación 1"></div>
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Guillermo Mazier | Todos los derechos reservados.</p>
+    <p>&copy; 2026 Guillermo Mazier | Todos los derechos reservados.</p>
   </footer>
 
   <script>
     ScrollReveal({ reset: false }).reveal('.section-title', { delay: 100, distance: '50px', origin: 'bottom', duration: 1000 });
     ScrollReveal({ reset: false }).reveal('.section-description', { delay: 200, distance: '40px', origin: 'bottom', duration: 800 });
-    ScrollReveal({ reset: false }).reveal('.card', { interval: 200, distance: '60px', origin: 'bottom', duration: 1200, easing: 'ease-out' });
+    ScrollReveal({ reset: false }).reveal('.card:not(.tiktok)', {
+  interval: 200,
+  distance: '60px',
+  origin: 'bottom',
+  duration: 1200,
+  easing: 'ease-out'
+});
 
-    function toggleMenu() {
-      const menu = document.querySelector('.nav-links');
-      menu.classList.toggle('active');
-    }
 
     function agregarVideo() {
       const link = document.getElementById('youtube-link').value;
@@ -274,5 +331,18 @@
       }
     }
   </script>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    
+    ScrollReveal().reveal('.hero', { delay: 300, duration: 1000 });
+    ScrollReveal().reveal('.about-img', { delay: 300, duration: 1500 });
+    ScrollReveal().reveal('.programs', { delay: 500, duration: 2000 });
+  </script>
+
 </body>
 </html>
